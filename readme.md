@@ -4,6 +4,8 @@ This application is usisng wrapper API for algoliasearch API to protect public k
 
 Since API is wrapped and served from backend of this application, speed of API will depend on your server configuration.
 
+Repository with static assets can be found here https://github.com/vojtechportes/algolia-test-build-assets. Repository for deployment on Openshift is here https://github.com/vojtechportes/algolia-test-openshift.
+
 ## API
 
 ### getAll
