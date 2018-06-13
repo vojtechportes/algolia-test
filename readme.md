@@ -51,7 +51,7 @@ docker build -t algolia-test
 docker run -p 5500:5000 algolia-test
 ```
 
-### Run locally using Node.js
+## Run locally using Node.js
 
 ```
 /* Application will be accessible on localhost:5000 */
@@ -60,7 +60,7 @@ npm install
 node index.js
 ```
 
-### Prview on Openshift
+## Prview on Openshift
 
 ```
 http://algolia-test-openshift-algolia-test-openshift.1d35.starter-us-east-1.openshiftapps.com/
