@@ -1,10 +1,26 @@
 # Algolia Test
 
-This application is usisng wrapper API for algoliasearch API to protect public key and to secure API using Access-Control-Allow-Origin.
+This application is usisng wrapper API for algoliasearch API to protect public key and to secure API using Access-Control-Allow-Origin and helmet module.
 
 Since API is wrapped and served from backend of this application, speed of API will depend on your server configuration.
 
-## config.js
+## API
+
+### getAll
+
+```
+curl -X GET localhost:5500/api/v1/public/search/getAllData/:page
+```
+
+### getFiltered
+
+```
+curl -X GET localhost:5500/api/v1/public/search/getFilteredData/:page?query=query
+```
+
+## Configuration
+
+Besides algolia settingings (appID, publicApiKey, privateApiKey, indexName), you can se also port on which this application will run and CORS to improve security of API and APP itself.
 
 ```javsacript
 {
@@ -31,4 +47,19 @@ Since API is wrapped and served from backend of this application, speed of API w
 
 docker build -t algolia-test
 docker run -p 5500:5000 algolia-test
+```
+
+### Run locally using Node.js
+
+```
+/* Application will be accessible on localhost:5000 */
+
+npm install
+node index.js
+```
+
+### Prview on Openshift
+
+```
+http://algolia-test-openshift-algolia-test-openshift.1d35.starter-us-east-1.openshiftapps.com/
 ```
